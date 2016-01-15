@@ -1,0 +1,20 @@
+
+
+
+{ "id"    : "timeline_test_pin_44",
+  "time"  : "2015-11-25T03:11",
+  "duration" : 1,
+  "createNotification" :{
+  "layout":{
+                "type"            : "genericNotification",
+                "title"           : "Incoming Message",
+                "subtitle"        : ".",
+                "foregroundColor" : "White",
+                "backgroundColor" : "Blue",
+                "body"            : "rafael push message",
+                "tinyIcon"        : "system://images//NOTIFICATION_FLAG"
+           }
+        }
+,
+"layout" :{"title" : "newday", "type" : "genericPin", "tinyIcon" : "system://images/NOTIFICATION_FLAG","body" : "new day reminder"}
+        }

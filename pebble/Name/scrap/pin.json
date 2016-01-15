@@ -1,0 +1,26 @@
+{ "id"    : "timeline_test_pin_5",
+  "time"  : "2015-11-24T07:00",
+  "duration" : 60,
+  "createNotification" :{
+  "layout":{ 
+     		"type"   	  : "genericNotification", 
+		"title"   	  : "rafee bday  2330",
+		"subtitle" 	  : "bday",
+                "foregroundColor" : "White",
+                "backgroundColor" : "Red",
+		"body"    	  : "bday body", 
+		"tinyIcon"	  : "system://images//NOTIFICATION_FLAG"
+	   }   
+	},
+
+"updateNotification" :{
+   "time" : "2015-11-24T07:00",
+   "layout" :{"type" : "genericNotification", "tinyIcon" : "system://images//NOTIFICATION_FLAG", "title" : "reminder", "body" : "change update!"}
+}
+,
+"layout" :{"title" : "bday reminder22", "type" : "genericPin", "tinyIcon" : "system://images/TIMELINE_CALENDAR","body" : "reminderbodylayout"}
+
+
+
+}
+

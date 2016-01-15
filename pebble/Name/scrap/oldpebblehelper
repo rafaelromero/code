@@ -1,0 +1,94 @@
+import httplib
+import json
+import urllib
+import random
+import datetime
+import dateutil
+import math
+from Pin import Pin
+from PinAction import PinAction	
+from JsonMachine import JsonMachine
+
+
+def GetPinTime(date) :
+	greenwhichtime = datetime.datetime.utcnow();
+	timediff = greenwhichtime - date
+	hours = math.floor((timediff.total_seconds())/3600)
+	greenwhichtime = date + datetime.timedelta(hours=hours)
+	return greenwhichtime
+
+
+def GetPinName(basePinName, appendValue):
+	return basePinName + '_' + appendValue
+
+
+def GetRequestURL(pinName):
+	return '/v1/user/pins/' + pinName
+
+
+def GetAPIHostName():
+	return 'timeline-api.getpebble.com'
+
+
+def GetRequestHeader():
+	apikey     = 'SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84'
+	userkey    = 'SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84'
+	headers = {
+			'Content-type' : 'application/json',
+		    'X-User-Token' : apikey, 
+		    'X-API-Key'    : userkey
+		  	  }
+	return headers
+
+
+
+def GetPinBody(pin):
+	body = json.dumps({
+	                'id'    : pin.Id,	
+	                'time'  : pin.Time,
+  				    'duration' : pin.Duration,
+	                'createNotification' : { 
+	                					'layout' : {
+	                					'type' 			  : pin.Notification.Layout.Type,
+	                					'title'           : pin.Notification.Layout.Title,
+                						'subtitle'        : pin.Notification.Layout.SubTitle,
+                						'foregroundColor' : pin.Notification.Layout.ForeGroundColor,
+                						'backgroundColor' : pin.Notification.Layout.BackGroundColor,
+                						'body'            : pin.Notification.Layout.Body ,
+                						'tinyIcon'        : pin.Notification.Layout.TinyIcon
+	                								}
+	                						},
+	                'layout' :{
+	                			 'title'    : pin.Layout.Title,
+	                			 'type'     : pin.Layout.Type,
+	                			 'tinyIcon' : pin.Layout.TinyIcon,
+	                			 'body'     : pin.Layout.Body
+	                		  },
+	                'actions':0
+	                }, sort_keys=False)
+	jsonMachine = JsonMachine()
+	body = jsonMachine.EncodeCustomObject(pin) 
+
+	return body
+
+
+
+
+def ConvertActionsToJson(pin):
+	actionsString = json.dumps(pin, default=convert_to_builtin_type)
+	
+	return actionsString
+
+def convert_to_builtin_type(obj):
+	return (obj.__dict__)
+
+
+
+
+
+
+
+
+
+
+

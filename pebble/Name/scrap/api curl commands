@@ -1,0 +1,40 @@
+curl -X PUT https://timeline-api.getpebble.com/v1/user/pins/timeline_test_pin_5  --header "Content-Type: application/json" --header "X-User-Token:SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84"  --header "X-API-Key:SBedq12g9y0rqtbqxezpac8iucif3fzu"  -d @pin.json
+
+
+curl -X PUT https://timeline-api.getpebble.com/v1/user/pins/pin110  --header "Content-Type: application/json" --header "X-User-Token:SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84"  --header "X-API-Key:SBedq12g9y0rqtbqxezpac8iucif3fzu"  -d @pin2.json
+
+
+
+
+{ "id"    : "timeline_test_pin_5",
+  "time"  : "2015-11-24T07:00",
+  "duration" : 60,
+  "createNotification" :{
+  "layout":{
+                "type"            : "genericNotification",
+                "title"           : "rafee bday  2330",
+                "subtitle"        : "bday",
+                "foregroundColor" : "White",
+                "backgroundColor" : "Red",
+                "body"            : "bday body",
+                "tinyIcon"        : "system://images//NOTIFICATION_FLAG"
+           }
+        },
+
+"updateNotification" :{
+   "time" : "2015-11-24T07:00",
+   "layout" :{"type" : "genericNotification", "tinyIcon" : "system://images//NOTIFICATION_FLAG", "title" : "reminder", "body" : "change update!"}
+}
+,
+"layout" :{"title" : "bday reminder22", "type" : "genericPin", "tinyIcon" : "system://images/TIMELINE_CALENDAR","body" : "reminderbodylayout"}
+
+
+
+
+
+curl -X PUT https://timeline-api.getpebble.com/v1/user/pins/timeline_test_pin_44 --header "Content-Type: application/json" --header "X-User-Token:SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84"  --header "X-API-Key:SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84"  -d @pin2.json
+
+
+
+
+{"duration": 2, "createNotification": {"layout": {"body": ".", "foregroundColor": "White", "subTitle": "subt2", "title": "notification text", "tinyIcon": "system://images//NOTIFICATION_FLAG", "backgroundColor": "Blue", "type": "genericPin"}}, "layout": {"body": "package will arrive on..", "foregroundColor": "White", "subTitle": ".", "title": "Package Update!", "tinyIcon": "system://images//NOTIFICATION_FLAG", "backgroundColor": "Blue", "type": "genericNotification"}, "id": "pin_577976203", "time": "2015-12-17T00:22:40.310517"}
