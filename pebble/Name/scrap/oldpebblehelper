@@ -31,8 +31,8 @@ def GetAPIHostName():
 
 
 def GetRequestHeader():
-	apikey     = 'SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84'
-	userkey    = 'SBYEJwYEBuOBDXpeIZBhoDWz4AkO6w84'
+	apikey     = ''
+	userkey    = ''
 	headers = {
 			'Content-type' : 'application/json',
 		    'X-User-Token' : apikey, 
