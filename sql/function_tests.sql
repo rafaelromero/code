@@ -1,4 +1,4 @@
-
+---! just playing around with sql functions, testing out stuff like CROSS APPLY
 
 
 
@@ -65,7 +65,7 @@ SELECT * FROM  fn_employeename2(1)
 
 
 
-
+---!!!TESTING OUT THE CROSS APPLY !!!!
 SELECT * FROM EMPLOYEE E1
 CROSS APPLY fn_employeename(E1.EMPID)
 
