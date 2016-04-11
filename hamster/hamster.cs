@@ -25,7 +25,7 @@ namespace hamster
                 System.Console.WriteLine("-c  [connection string]");
                 System.Console.WriteLine("");
                 System.Console.WriteLine("!sample command yall! " );
-                System.Console.WriteLine("hamster -d C:\\mydev_folder\\Pilot\\Prv2\\Dev\\ -fx   -c  \"data source=SOMESERVERNAME\\SOMEINSTANCENAME;initial catalog=DBNAME; User ID=DBUSER; Password=DBPASSWORD;\"");
+                System.Console.WriteLine("hamster -d C:\\mydev_folder\\Dev\\ -fx   -c  \"data source=SOMESERVERNAME\\SOMEINSTANCENAME;initial catalog=DBNAME; User ID=DBUSER; Password=DBPASSWORD;\"");
 
                 return 1;
                
